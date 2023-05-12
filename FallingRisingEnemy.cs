@@ -10,20 +10,20 @@ using UnityEngine;
 
 public class FallingRisingEnemy : MonoBehaviour
 {
-    public float detectionRange = 5f;
-    public float fallSpeed = 10f;
-    public float riseSpeed = 5f;
-    public float groundLevel = 0f;
-    public float fallCooldown = 2f;
+    [SerializeField] float detectionRange = 5f;
+    [SerializeField] float fallSpeed = 10f;
+    [SerializeField] float riseSpeed = 5f;
+    [SerializeField] float groundLevel = 0f;
+    [SerializeField] float fallCooldown = 2f;
     [SerializeField] Sprite fallingSprite;
     [SerializeField] Sprite risingSprite;
 
-    private Transform playerTransform;
-    private bool isFalling = false;
-    private bool isRising = false;
-    private float initialY;
-    private float fallTimer = 0f;
-    private SpriteRenderer spriteRenderer;
+    Transform playerTransform;
+    bool isFalling = false;
+    bool isRising = false;
+    float initialY;
+    float fallTimer = 0f;
+    SpriteRenderer spriteRenderer;
 
     private void Start()
     {

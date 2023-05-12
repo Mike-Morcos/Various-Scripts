@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Generate_Circle : MonoBehaviour
 {
-    public GameObject circle;
+    [SerializeField] GameObject circle;
     private float spawnTimer;
     private Transform newPosition;
     private Vector3 addToPosition;

@@ -10,7 +10,7 @@ public class FishSpawner : MonoBehaviour
     private float _spawnMaxY = 7.5f, _spawnMinY = -3.5f;
 
     // Public array of fish game objects
-    public GameObject[] fish;
+    [SerializeField] GameObject[] fish;
 
     // Timer variables to reduce the spawn timer
     private float _spawnTimer;
