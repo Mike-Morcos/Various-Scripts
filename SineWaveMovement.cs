@@ -6,25 +6,25 @@ using UnityEngine;
 
 public class SineWaveMovement : MonoBehaviour
 {
-    public float moveSpeed = 0.3f;
-    public float frequency = 3.0f;  // Speed of sine movement
-    public float magnitude = 0.2f;  // Size of sine movement
+    [SerializeField] float moveSpeed = 0.3f;
+    [SerializeField] float frequency = 3.0f;  // Speed of sine movement
+    [SerializeField] float magnitude = 0.2f;  // Size of sine movement
 
-    private Vector3 _axis;
-    private Vector3 _pos;
+    private Vector3 axis;
+    private Vector3 pos;
 
     private void Start()
     {
-        _pos = transform.position;
-        _axis = new Vector2(0, 2);  // May or may not be the axis you want
+        pos = transform.position;
+        axis = new Vector2(0, 2);  // May or may not be the axis you want
     }
 
     private void Update()
     {
-        _pos += -transform.right * Time.deltaTime * moveSpeed;
-        _pos += transform.up * Time.deltaTime * moveSpeed;
+        pos += -transform.right * Time.deltaTime * moveSpeed;
+        pos += transform.up * Time.deltaTime * moveSpeed;
 
-        transform.position = _pos + _axis * Mathf.Sin(Time.time * frequency) * magnitude;
+        transform.position = pos + axis * Mathf.Sin(Time.time * frequency) * magnitude;
     }
 }
 

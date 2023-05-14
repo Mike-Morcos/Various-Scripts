@@ -1,23 +1,23 @@
-﻿using UnityEngine;
+﻿// The PingPongMotion class is responsible for moving a GameObject back and
+// forth from an original starting point.using UnityEngine;
 
 public class PingPongMotion : MonoBehaviour
 {
-    // The PingPongMotion class is responsible for moving a GameObject back and
-    // forth from an original starting point.// Original position
-    private Vector3 _origPosition = Vector3.zero;
+    // Original position
+    private Vector3 origPosition = Vector3.zero;
     // Axis to move on
-    public Vector3 moveAxis = Vector3.zero;
+    [SerializeField] Vector3 moveAxis = Vector3.zero;
     // Speed at which we want to move back and forth
-    public float distance = 3f;
+    [SerializeField] float distance = 3f;
 
-    private Transform _transform;
+    private Transform transform;
 
     private void Awake()
     {
         // Get transform component
-        _transform = transform;
+        transform = transform;
         // Copy original position
-        _origPosition = _transform.position;
+        origPosition = transform.position;
     }
 
     // The Update function relies on the Mathf.PingPong function to transition a
@@ -29,6 +29,6 @@ public class PingPongMotion : MonoBehaviour
     private void Update()
     {
         // Update platform position with ping pong
-        _transform.position = _origPosition + moveAxis * Mathf.PingPong(Time.time, distance);
+        transform.position = origPosition + moveAxis * Mathf.PingPong(Time.time, distance);
     }
 }
