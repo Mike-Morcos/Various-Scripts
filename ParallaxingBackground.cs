@@ -1,7 +1,9 @@
+//---------------------------------------------------------------------------------------------------------------------
 // This script creates a parallax scrolling effect in a 2D game in Unity.
 // The script captures the main camera's transform component and stores it in the 'cameraTransform' variable.
 // It uses the camera's position to determine the amount of movement in the frame, and applies a parallax effect
 // to the background by modifying its position based on the camera's movement.
+//---------------------------------------------------------------------------------------------------------------------
 
 using UnityEngine;
 
