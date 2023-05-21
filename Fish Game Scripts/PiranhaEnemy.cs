@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PiranhaEnemy : MonoBehaviour
 {
-    #region Fields
+
     private float _attackRadius = 6f;
     private Transform _player;
     private Vector2 _movingVector;
@@ -16,7 +16,6 @@ public class PiranhaEnemy : MonoBehaviour
 
     private bool _isMoving;
     private bool _isAttacking;
-    #endregion
 
     void Start()
     {
